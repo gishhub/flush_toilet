@@ -20,6 +20,8 @@
     slider.maximumValue = 1.0;
     slider.value = 0.5;
 
+    super.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.jpg"]];
+
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
