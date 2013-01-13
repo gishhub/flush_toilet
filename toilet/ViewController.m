@@ -20,6 +20,8 @@
     slider.maximumValue = 1.0;
     slider.value = 0.5;
 
+    musicStr = @"In_toilet_main";
+
     super.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.jpg"]];
 
     [super viewDidLoad];
@@ -36,18 +38,23 @@
 {
     if (soundMain.playing)
     {
-        NSString *bgmPath = [[NSBundle mainBundle] pathForResource:@"In_toilet_end" ofType:@"m4a"];
-        NSURL *bgmUrl = [NSURL fileURLWithPath:bgmPath];
-        
-        soundEnd = [[AVAudioPlayer alloc] initWithContentsOfURL:bgmUrl error:nil];
-        [soundEnd setNumberOfLoops:0];
-        [soundEnd play];
+        if ([musicStr isEqualToString:@"In_toilet_main"])
+        {
+            NSString *bgmPath = [[NSBundle mainBundle] pathForResource:@"In_toilet_end" ofType:@"m4a"];
+            NSURL *bgmUrl = [NSURL fileURLWithPath:bgmPath];
+            
+            soundEnd = [[AVAudioPlayer alloc] initWithContentsOfURL:bgmUrl error:nil];
+            [soundEnd setNumberOfLoops:0];
+            [soundEnd play];
+        }
+
         [soundMain stop];
         [button setTitle:@"▷" forState:UIControlStateNormal];
     }
     else
     {
-        NSString *bgmPath = [[NSBundle mainBundle] pathForResource:@"In_toilet_main" ofType:@"m4a"];
+        NSLog(@"%@", musicStr);
+        NSString *bgmPath = [[NSBundle mainBundle] pathForResource:musicStr ofType:@"m4a"];
         NSURL *bgmUrl = [NSURL fileURLWithPath:bgmPath];
         
         soundMain = [[AVAudioPlayer alloc] initWithContentsOfURL:bgmUrl error:nil];
@@ -63,6 +70,25 @@
 
     [soundMain setVolume:slider.value];
     [soundEnd setVolume:slider.value];
+}
+
+- (IBAction)changeMusic:(id)sender
+{
+    segment = sender;
+
+    NSLog(@"%d", segment.selectedSegmentIndex);
+    switch (segment.selectedSegmentIndex) {
+        case 0:
+            musicStr = @"In_toilet_main";
+            break;
+
+        case 1:
+            musicStr = @"nc51153";
+            break;
+
+        default:
+            break;
+    }
 }
 
 @end

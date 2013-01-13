@@ -14,10 +14,14 @@
     AVAudioPlayer *soundMain;
     AVAudioPlayer *soundEnd;
     UISlider *slider;
+    UISegmentedControl *segment;
     IBOutlet UIButton *button;
+
+    NSString *musicStr;
 }
 
 - (IBAction)playButton;
 - (IBAction)volumeSlider:(id) sender;
+- (IBAction)changeMusic:(id) sender;
 
 @end
