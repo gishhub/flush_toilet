@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import <iAd/iAd.h>
 
 @interface ViewController : UIViewController
 {
@@ -15,13 +16,14 @@
     AVAudioPlayer *soundEnd;
     UISlider *slider;
     UISegmentedControl *segment;
-    IBOutlet UIButton *button;
-
     NSString *musicStr;
+
+    IBOutlet UIButton *button;
+    IBOutlet ADBannerView *adBanner;
 }
 
 - (IBAction)playButton;
-- (IBAction)volumeSlider:(id) sender;
-- (IBAction)changeMusic:(id) sender;
+- (IBAction)volumeSlider:(id)sender;
+- (IBAction)changeMusicSegment:(id)sender;
 
 @end
