@@ -18,8 +18,8 @@
 {
     // Initialize slider values.
     slider.minimumValue = 0.0;
-    slider.maximumValue = 1.0;
-    slider.value = 0.5;
+    slider.maximumValue = 5.0;
+    slider.value = 2.5;
 
     // Default music is flush toilet.
     musicStr = @"In_toilet_main";
@@ -85,6 +85,7 @@
 
             soundEnd = [[AVAudioPlayer alloc] initWithContentsOfURL:bgmUrl error:nil];
             [soundEnd setNumberOfLoops:0];
+            [soundEnd setVolume:slider.value];
             [soundEnd play];
         }
 
@@ -98,6 +99,7 @@
 
         soundMain = [[AVAudioPlayer alloc] initWithContentsOfURL:bgmUrl error:nil];
         [soundMain setNumberOfLoops:-1];
+        [soundMain setVolume:slider.value];
         [soundMain play];
         [button setTitle:@"□" forState:UIControlStateNormal];
     }

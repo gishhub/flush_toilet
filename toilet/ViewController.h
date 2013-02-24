@@ -14,10 +14,10 @@
 {
     AVAudioPlayer *soundMain;
     AVAudioPlayer *soundEnd;
-    UISlider *slider;
     UISegmentedControl *segment;
     NSString *musicStr;
 
+    IBOutlet UISlider *slider;
     IBOutlet UIButton *button;
     IBOutlet ADBannerView *adBanner;
 }
