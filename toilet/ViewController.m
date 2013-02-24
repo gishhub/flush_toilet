@@ -25,7 +25,19 @@
     musicStr = @"In_toilet_main";
 
     // Changing the back ground image.
-    super.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.jpg"]];
+    UIScreen *screen = [UIScreen mainScreen];
+    CGRect rect = [screen applicationFrame];
+    UIImage *bgImage = [UIImage imageNamed:@"bg.jpg"];
+    
+    UIGraphicsBeginImageContext(CGSizeMake(rect.size.width, rect.size.height));
+    
+    [bgImage drawInRect:CGRectMake(0, 0, rect.size.width, rect.size.height)];
+    
+    bgImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    super.view.backgroundColor = [UIColor colorWithPatternImage:bgImage];
 
     // ADView is hidden until it reads AD.
     adBanner.delegate = self;
@@ -49,6 +61,7 @@
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
 {
+    adBanner.hidden = YES;
 }
 
 - (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
