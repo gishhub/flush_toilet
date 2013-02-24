@@ -82,7 +82,7 @@
         {
             NSString *bgmPath = [[NSBundle mainBundle] pathForResource:@"In_toilet_end" ofType:@"m4a"];
             NSURL *bgmUrl = [NSURL fileURLWithPath:bgmPath];
-            
+
             soundEnd = [[AVAudioPlayer alloc] initWithContentsOfURL:bgmUrl error:nil];
             [soundEnd setNumberOfLoops:0];
             [soundEnd play];
@@ -95,7 +95,7 @@
     {
         NSString *bgmPath = [[NSBundle mainBundle] pathForResource:musicStr ofType:@"m4a"];
         NSURL *bgmUrl = [NSURL fileURLWithPath:bgmPath];
-        
+
         soundMain = [[AVAudioPlayer alloc] initWithContentsOfURL:bgmUrl error:nil];
         [soundMain setNumberOfLoops:-1];
         [soundMain play];
