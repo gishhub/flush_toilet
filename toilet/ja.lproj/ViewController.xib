@@ -926,7 +926,7 @@
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="3128_32.png">{32, 32}</string>
 			<string key="3129_32.png">{32, 32}</string>
-			<string key="bg.jpg">{16, 16}</string>
+			<string key="bg.jpg">{640, 960}</string>
 			<string key="top.png">{289, 108}</string>
 		</dictionary>
 		<bool key="IBDocument.UseAutolayout">YES</bool>

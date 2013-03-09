@@ -94,6 +94,7 @@
     }
     else
     {
+        NSLog([[NSBundle mainBundle] pathForResource:musicStr ofType:@"m4a"]);
         NSString *bgmPath = [[NSBundle mainBundle] pathForResource:musicStr ofType:@"m4a"];
         NSURL *bgmUrl = [NSURL fileURLWithPath:bgmPath];
 
