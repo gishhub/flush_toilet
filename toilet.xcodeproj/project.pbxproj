@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A015EB1916FF16EC00E03441 /* In_toilet_end.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A072DCE216D9F7CB0097F80F /* In_toilet_end.m4a */; };
+		A015EB1B16FF16F200E03441 /* In_toilet_main.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A072DCE316D9F7CB0097F80F /* In_toilet_main.m4a */; };
 		A06B8137167DBF4B00F12FD1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06B8136167DBF4B00F12FD1 /* AVFoundation.framework */; };
 		A06B813A167DC37300F12FD1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06B8136167DBF4B00F12FD1 /* AVFoundation.framework */; };
 		A072DCDF16D9F7BB0097F80F /* nc51153.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A072DCDE16D9F7BB0097F80F /* nc51153.m4a */; };
@@ -289,6 +291,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A015EB1B16FF16F200E03441 /* In_toilet_main.m4a in Resources */,
+				A015EB1916FF16EC00E03441 /* In_toilet_end.m4a in Resources */,
 				A0C41B72167C83B4009F5A70 /* InfoPlist.strings in Resources */,
 				A0C41B7A167C83B4009F5A70 /* Default.png in Resources */,
 				A0C41B7C167C83B4009F5A70 /* Default@2x.png in Resources */,
